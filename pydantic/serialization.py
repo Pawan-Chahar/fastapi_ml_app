@@ -10,7 +10,7 @@ class Address(BaseModel):
 class Patient(BaseModel):
 
     name:str
-    gender: str
+    gender: str = 'Male'
     age: int 
     address: Address
 
@@ -49,6 +49,12 @@ print(temp)
 print(type(temp))
 
 temp=patient1.model_dump(exclude={'address':['state']})
+print(temp)
+
+print(type(temp))
+
+
+temp=patient1.model_dump(exclude_unset=True)
 print(temp)
 
 print(type(temp))
