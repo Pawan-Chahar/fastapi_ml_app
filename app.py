@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse 
 from pydantic import BaseModel, Field , computed_field
 from typing import Literal , Annotated
 import pickle
@@ -37,7 +38,7 @@ class UserInput(BaseModel):
     
     @computed_field
     @property
-    def bmi(self):
+    def bmi(self) -> float:
         return self.weight/ (self.height **2)
     
     @computed_field
@@ -77,3 +78,20 @@ class UserInput(BaseModel):
             return 2
         else:
             return 3
+
+
+@app.post('/predict')
+def predict_premium(data: UserInput):
+
+    input_df = pd.DataFrame([{
+            'bmi': data.bmi,
+            'age_group': data.age_group,
+            'lifestyle_risk': data.lifestyle_risk,
+            'city_tier': data.city_tier,
+            'income_lpa': data.income_lpa,
+            'occupation': data.occupation
+        }])
+    
+    prediction = model.predict(input_df)[0]
+
+    return JSONResponse(status_code=200 , content={'predicted_category': prediction})
