@@ -2,10 +2,7 @@
 ```markdown
 # FastAPI + Streamlit ML App - Insurance Premium Category Prediction
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.40+-red)
-![scikit--learn](https://img.shields.io/badge/scikit--learn-1.5+-orange)
+
 
 A complete **end-to-end Machine Learning application** that predicts **Insurance Premium Categories** using a trained ML model, served via **FastAPI** backend and a beautiful **Streamlit** frontend.
 
@@ -23,7 +20,7 @@ This project demonstrates a production-ready ML deployment pattern:
 ## Folder & File Structure
 
 
-```
+```bash
 fastapi_ml_app/
 ├── .venv/                    # Virtual environment (git ignored)
 ├── __pycache__/              # Python cache (git ignored)
@@ -134,24 +131,3 @@ Now enter patient details → get instant premium category prediction!
 - [ ] Add confidence/probability visualization in UI
 - [ ] CI/CD with GitHub Actions
 
-## Contributing
-
-Feel free to open issues or PRs!  
-Especially welcome: better model accuracy, UI enhancements, deployment guides.
-
-## License
-
-MIT License – feel free to use, modify, and distribute.
-
-Made with ❤️ by [Pawan Chahar](https://github.com/Pawan-Chahar)
-
-Last updated: January 2026
-```
-
-### Quick Tips Before Committing
-
-- If your actual prediction key is **not** `predicted_category` (e.g. `category`, `prediction`, `premium_level`), update the example in the README.
-- Add screenshots! (Streamlit UI + Swagger docs + notebook outputs) → upload to repo and link with `![screenshot](images/ui.png)`
-- If you have a live demo link later (Render/HuggingFace/etc.), add it at the top!
-
-Let me know if you want me to add sections (like screenshots placeholders, badges, or more detailed API examples) or adjust anything. Good luck with your project! 🚀
