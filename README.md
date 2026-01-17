@@ -19,7 +19,6 @@ Predict whether an insurance premium falls into **Low**, **Medium**, **High** (o
 ## Folder & File Structure
 
 
-```markdown
 
 
 
