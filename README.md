@@ -1,5 +1,3 @@
-
-```markdown
 # FastAPI + Streamlit ML App - Insurance Premium Category Prediction
 
 
@@ -15,9 +13,14 @@ This project demonstrates a production-ready ML deployment pattern:
 - Build an interactive user interface with **Streamlit**
 - Simple, clean, and easy to deploy (Docker-ready in future)
 
-**Use case**: Predict whether an insurance premium falls into **Low**, **Medium**, **High** (or similar) category based on patient features like age, BMI, smoking status, children, region, etc.
+**Use case**: 
+Predict whether an insurance premium falls into **Low**, **Medium**, **High** (or similar) category based on patient features like age, BMI, smoking status, children, region, etc.
 
 ## Folder & File Structure
+
+
+```markdown
+
 
 
 ```bash
